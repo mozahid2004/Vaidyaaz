@@ -1,0 +1,75 @@
+.blog-content h1 {
+  font-size: 2rem;
+  margin: 25px 0 15px;
+  color: #1a1a1a;
+}
+img{
+  height: 50vh;
+  width: 100%;
+  object-fit: contain;
+}
+.blog-content h2 {
+  font-size: 1.4rem;
+  margin: 20px 0 12px;
+  color: #007bff; 
+}
+
+.blog-content p {
+  margin: 14px 0;
+  line-height: 1.5; /* less space between lines */
+  color: #444;
+}
+.blog-content {
+  text-align: left; 
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content p,
+.blog-content strong,
+.blog-content blockquote {
+  text-align: left !important;
+}
+
+
+.blog-content strong {
+  color: #222;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid #007bff;
+  padding-left: 12px;
+  margin: 18px 0;
+  color: #555;
+  background: #f7faff;
+  text-align: left;
+}
+.back-button {
+  padding: 6px 12px;
+  position: relative;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  color: #007bff;
+  display: inline-flex;
+  align-items: center;
+  /* gap: 8px; */
+  transition: all 0.3s ease;
+}
+
+.back-button span {
+  font-size: 40px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.back-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.back-button:hover span {
+  transform: translateX(-12px);
+  color: white; 
+}

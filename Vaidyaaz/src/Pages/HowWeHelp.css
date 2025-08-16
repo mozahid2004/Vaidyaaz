@@ -1,0 +1,137 @@
+.how-we-help {
+  padding: 3rem 1rem;
+  background: #f8f9fa;
+}
+
+.how-we-help h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 2.2vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.how-we-help .intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  color: #555;
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.coating-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.coating-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.coating-row .text {
+  flex: 1.2; /* give more space to text */
+}
+
+.coating-row h3 {
+  font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.coating-row ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: clamp(1rem, 1.05vw, 1.1rem);
+  line-height: 1.6;
+}
+
+/* Button + Icon aligned */
+.coating-row button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #219150;
+  font-weight: 600;
+  border: 3px solid #219150;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.coating-row button:hover {
+  background: #219150;
+  color: #f8f9fa;
+}
+
+.BtnArrow {
+  transition: transform 0.5s ease;
+}
+
+.coating-row button:hover .BtnArrow {
+  transform: translateX(30%);
+}
+
+.image-placeholder {
+  flex: 1;
+}
+
+.image-placeholder img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .coating-row .text {
+    flex: 1; /* equal space for text and image */
+  }
+}
+
+@media (max-width: 768px) {
+  .coating-row,
+  .coating-row.reverse {
+    flex-direction: column;
+  }
+  .coating-row .text {
+    flex: unset;
+    width: 100%;
+  }
+  .coating-row button {
+    width: fit-content;
+  }
+}
+
+.coating-row ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.coating-row li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 1.05vw, 1.1rem);
+  color: #333;
+}
+
+.point-icon {
+  color: #219150;
+  flex-shrink: 0;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.image-placeholder{
+  height: 400px;
+}

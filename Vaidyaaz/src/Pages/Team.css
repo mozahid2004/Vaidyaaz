@@ -1,0 +1,117 @@
+.team-section {
+  padding: 4rem 1rem;
+  background: #f9f9f9;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards */
+  gap: 2rem; /* Even space between */
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  max-width: 350px;
+  flex: 1 1 280px; /* Responsive card width */
+}
+
+.team-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-img {
+  width: 100%;
+  height: 350px; /* Fixed height */
+  object-fit: cover; /* Fill area, no gaps */
+  display: block;
+}
+
+/* Overlay for icons */
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+/* Social icon animation */
+.team-overlay a {
+  color: white;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.team-card:hover .team-overlay a {
+  animation: iconSlideIn 0.4s forwards;
+}
+
+.team-card:hover .team-overlay a:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.team-card:hover .team-overlay a:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.team-card:hover .team-overlay a:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes iconSlideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Text styles */
+.team-position {
+  font-weight: bold;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.team-message {
+  font-style: italic;
+  padding: 0 1.5rem 1.5rem;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-title {
+    font-size: 2rem;
+  }
+
+  .team-img {
+    height: 280px;
+  }
+}
