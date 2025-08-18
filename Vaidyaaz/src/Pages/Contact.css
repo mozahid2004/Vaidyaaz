@@ -17,6 +17,20 @@
   z-index: 1;
 }
 
+.loading-msg {
+  color: #ff9800;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.success-msg {
+  color: #4caf50;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
 .contact-hero .overlay {
   position: absolute;
   top: 0;

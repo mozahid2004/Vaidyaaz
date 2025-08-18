@@ -6,28 +6,42 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
 
   const [success, setSuccess] = useState("");
+  const [loading, setLoading] = useState(false); // 👈 loader state
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // 👈 start loader
 
-    if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill in all required fields!");
-      return;
+    const params = new URLSearchParams(formData).toString();
+    const url = `https://script.google.com/macros/s/AKfycbxcdkz9XNxGaW33vTN5yGJwT2j1CUAiTjlh5gDgoJAK68NfG7xLPnWU_J0S-85hwzEw/exec?${params}`;
+
+    try {
+      const response = await fetch(url);
+      const result = await response.json();
+
+      if (result.result === "success") {
+        setSuccess("✅ Your message has been sent successfully!");
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        setSuccess("❌ Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setSuccess("❌ Network error: " + err.message);
+    } finally {
+      setLoading(false); // 👈 stop loader
     }
 
-    console.log("Form submitted:", formData);
-    setSuccess("Your message has been sent!");
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setTimeout(() => setSuccess(""), 3000);
+    setTimeout(() => setSuccess(""), 4000); // clear msg
   };
 
   return (
@@ -46,20 +60,61 @@ const Contact = () => {
         <div className="contactpage-grid">
           {/* Form */}
           <form className="contactpage-form" onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Your Name *" value={formData.name} onChange={handleChange} />
-            <input type="email" name="email" placeholder="Your Email *" value={formData.email} onChange={handleChange} />
-            <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} />
-            <textarea name="message" placeholder="Your Message *" rows="5" value={formData.message} onChange={handleChange} />
-            <button type="submit">Send Message</button>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name *"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email *"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Your Phone *"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message *"
+              rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+
+            {/* Loader / Success message */}
+            {loading && <p className="loading-msg">⏳ Sending your message...</p>}
             {success && <p className="success-msg">{success}</p>}
           </form>
 
           {/* Info */}
           <div className="contactpage-info">
             <h3>Our Office</h3>
-            <p>A - 42 ADDL MIDC NANDGAONPETH,
-              AMRAVATI, Maharashtra,
-              INDIA - Pin 444901</p>
+            <p>
+              A - 42 ADDL MIDC NANDGAONPETH, AMRAVATI, Maharashtra, INDIA - Pin 444901
+            </p>
 
             <h3>Contact Details</h3>
             <p>📞 Phone: +91 739-789-2909</p>
@@ -80,7 +135,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Social Icons below both cards */}
+        {/* Social Icons */}
         <div className="social-links">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <Facebook size={22} />
