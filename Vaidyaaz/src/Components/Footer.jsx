@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -10,15 +18,19 @@ const Footer = () => {
 
         {/* Company Info */}
         <div className="footer-section">
-          <h2>Our Company</h2>
+          <h2>About VAIDYAAZ</h2>
           <p>
-            We provide top-quality products and services with a focus on
-            customer satisfaction and innovation. Always here to serve you better.
+            VAIDYAAZ specializes in advanced coating solutions for
+            <strong> heat resistance, industrial durability, and long-lasting
+              protection</strong>. Trusted by leading industries to deliver
+            innovation and quality.
           </p>
           <div className="contact-info">
-            <p><FaPhoneAlt /> +91 98765 43210</p>
-            <p><FaEnvelope /> support@yourcompany.com</p>
-            <p><FaMapMarkerAlt /> Mumbai, India</p>
+            <p><FaPhoneAlt /> +91 7397892909</p>
+            <p><FaEnvelope />vaidyaaz@vaidyaaz.com</p>
+            <p><FaMapMarkerAlt />A - 42 ADDL MIDC NANDGAONPETH,
+              AMRAVATI, Maharashtra,
+              INDIA - Pin 444901</p>
           </div>
         </div>
 
@@ -27,36 +39,51 @@ const Footer = () => {
           <h2>Quick Links</h2>
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/products">Products</Link></li>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/products">Products</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
-        {/* Newsletter */}
+        {/* Our Services */}
         <div className="footer-section">
-          <h2>Newsletter</h2>
-          <p>Subscribe to get updates on our latest offers.</p>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
-          </form>
+          <h2>Our Services</h2>
+          <ul>
+            <li>Heat Resistant Coatings</li>
+            <li>Industrial Paint Solutions</li>
+            <li>Surface Protection Systems</li>
+            <li>Consulting & Custom Solutions</li>
+          </ul>
+        </div>
+
+        {/* Resources */}
+        <div className="footer-section">
+          <h2>Resources</h2>
+          <ul>
+            <li><Link to="/careers">Careers</Link></li>
+            <li><Link to="/faq">FAQs</Link></li>
+            <li><Link to="/privacy">Privacy Policy</Link></li>
+            <li><Link to="/terms">Terms & Conditions</Link></li>
+          </ul>
         </div>
 
         {/* Social Media */}
         <div className="footer-section">
           <h2>Follow Us</h2>
           <div className="social-icons">
-            <Link to="#"><FaFacebookF /></Link>
-            <Link to="#"><FaTwitter /></Link>
-            <Link to="#"><FaInstagram /></Link>
-            <Link to="#"><FaLinkedin /></Link>
+            <a href="#"><FaFacebookF /></a>
+            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaLinkedin /></a>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© VAIDYAAZ Corporation Pvt. Ltd. All rights reserved. {new Date().getFullYear()} </p>
+        <p>
+          © VAIDYAAZ Coating Solutions Pvt. Ltd. All rights reserved.{" "}
+          {new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   );
