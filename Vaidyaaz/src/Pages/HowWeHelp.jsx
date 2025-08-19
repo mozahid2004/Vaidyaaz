@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./HowWeHelp.css";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const coatings = [
   {
@@ -68,19 +69,40 @@ const HowWeHelp = () => {
   return (
     <section className="how-we-help">
       <div className="container">
-        <h2>How We Help ??</h2>
-        <p className="intro">
+        {/* Heading */}
+        <h2>
+  How We Help ??
+</h2>
+
+
+
+        {/* Intro */}
+        <motion.p
+          className="intro"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: false, amount: 0.4 }}
+        >
           At <strong>Vaidyaaz</strong>, our ENCON Coating solutions help save
           fuel, lower emissions, and extend equipment life — combining
           environmental responsibility with cost savings.
-        </p>
+        </motion.p>
 
+        {/* Coating Rows */}
         {coatings.map((item, index) => (
           <div
             key={index}
             className={`coating-row ${index % 2 === 1 ? "reverse" : ""}`}
           >
-            <div className="text">
+            {/* Text block with scroll animation */}
+            <motion.div
+              className="text"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
               <h3>{item.title}</h3>
               <p className="desc">{item.description}</p>
               <ul>
@@ -93,10 +115,18 @@ const HowWeHelp = () => {
               <button onClick={() => navigate(item.link)}>
                 View Product <ArrowRight className="BtnArrow" />
               </button>
-            </div>
-            <div className="image-placeholder">
+            </motion.div>
+
+            {/* Image block with scroll animation */}
+            <motion.div
+              className="image-placeholder"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
               <img src={item.image} alt={item.title} />
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

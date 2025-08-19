@@ -23,7 +23,7 @@ const Contact = () => {
     setLoading(true); // 👈 start loader
 
     const params = new URLSearchParams(formData).toString();
-    const url = `https://script.google.com/macros/s/AKfycbxcdkz9XNxGaW33vTN5yGJwT2j1CUAiTjlh5gDgoJAK68NfG7xLPnWU_J0S-85hwzEw/exec?${params}`;
+    const url = `https://script.google.com/macros/s/AKfycbzLNHkS9TIegwqGU2LqAirXsKCH4kVmLA5fXxVQfDRsfjgGgpGE_RqAJX_SPmTj4CcX/exec?${params}`;
 
     try {
       const response = await fetch(url);
@@ -33,7 +33,7 @@ const Contact = () => {
         setSuccess("✅ Your message has been sent successfully!");
         setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
       } else {
-        setSuccess("❌ Something went wrong. Please try again.");
+        setSuccess("❌Please Check your Internet Connection.");
       }
     } catch (err) {
       setSuccess("❌ Network error: " + err.message);
