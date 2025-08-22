@@ -16,18 +16,12 @@ function About() {
       {/* About Company */}
       <section className="about-company">
         <div className="container">
-          <h2>About Viadyazz</h2>
+          <h2>About Viadyaaz</h2>
           <p>
-            Viadyazz is a forward-thinking technology company dedicated to delivering 
-            innovative, high-quality digital solutions. Since its inception, Viadyazz 
-            has been committed to transforming ideas into reality through cutting-edge 
-            web development, creative design, and strategic digital marketing.
+          Vaidyaaz Corporation Pvt. Ltd. is a pioneering company dedicated to energy-saving industrial coatings. Since its inception, Vaidyaaz has been committed to sustainability, innovation, and cost-efficiency, providing industries with advanced coating solutions that not only protect equipment but also deliver significant energy savings.
           </p>
           <p>
-            Our journey began with a vision to bridge the gap between businesses and 
-            technology, helping organizations of all sizes thrive in the digital 
-            landscape. Today, we are proud to serve a diverse clientele with 
-            customized, scalable, and results-driven solutions.
+          With years of research and development, Vaidyaaz has introduced its flagship product line – ENCON Coatings – a breakthrough in industrial coating technology. These coatings are designed to reduce heat loss, improve efficiency, and cut down energy costs, enabling industries to save crores of rupees every year while contributing to a cleaner and greener environment.
           </p>
         </div>
 

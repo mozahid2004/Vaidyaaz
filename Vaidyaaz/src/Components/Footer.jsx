@@ -73,15 +73,15 @@ const Footer = () => {
           <div className="social-icons">
             <a href="#"><FaFacebookF /></a>
             <a href="#"><FaTwitter /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedin /></a>
+            <a href="https://www.instagram.com/vaidyaaz/?igsh=MWRhOGw1aGd6eGM1dA%3D%3D"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/in/vaidyaaz-corporation-private-limited-31843a335/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FaLinkedin /></a>
           </div>
         </div>
       </div>
 
       <div className="footer-bottom">
         <p>
-          © VAIDYAAZ Coating Solutions Pvt. Ltd. All rights reserved.{" "}
+          © Vaidyaaz Corporation Private Limited. All rights reserved.{" "}
           {new Date().getFullYear()}
         </p>
       </div>

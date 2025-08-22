@@ -1,28 +1,30 @@
 import React from "react";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import "./Team.css";
+import MadamImg from "../assets/Images/Madam.jpg"
+import VaidyaIImg from "../assets/Images/Vaidya.jpg"
 
 const teamMembers = [
   {
     name: "Mr Pradip Vaidya",
     position: "Managing Director",
-    img: " https://png.pngtree.com/background/20230403/original/pngtree-side-profile-of-old-man-vector-picture-image_2278848.jpg", // Replace with your image URL
+    img: VaidyaIImg,
     message: "By reducing carbon emissions, We ensure cleaner air, better health, longer and safer future for all.",
     facebook: "#",
     instagram: "#",
     linkedin: "#",
   },
- 
   {
-    name: "Sarah Johnson",
+    name: "Ashwini Wahane",
     position: "Director",
-    img: "https://img.freepik.com/free-photo/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands_197531-343.jpg", // Replace with your image URL
+    img: MadamImg,
     message: "We believe in empowering people and creating impactful solutions.",
     facebook: "#",
-    instagram: "#",
+    instagram: "https://www.instagram.com/fempreneur_01/",
     linkedin: "#",
   },
 ];
+
 
 const Team = () => {
   return (
