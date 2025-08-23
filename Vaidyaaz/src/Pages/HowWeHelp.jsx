@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import "./HowWeHelp.css";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import Furnace from "../assets/Images/Furnace.jpg";
+import Oven from "../assets/Images/Oven.jpg";
+import RadiantTube from "../assets/Images/Radiant Tubes.jpg";
+import Boiler from "../assets/Images/Boiler.jpg";
 
 const coatings = [
   {
@@ -16,8 +20,8 @@ const coatings = [
       "Extends furnace life by preventing surface damage",
     ],
     link: "/products",
-    image:
-      "https://encon.co.in/wp-content/uploads/2025/06/Oxy-Fuel-Refractory-Protection-to-Reduce-Furnace-Wear-600x400.jpg",
+    image: Furnace,
+    label: "FURNACE",
   },
   {
     title: "Vaidyaaz ENCON Coating for Radiant Tubes",
@@ -30,8 +34,8 @@ const coatings = [
       "Improves operational reliability",
     ],
     link: "/products",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Industrial_furnace.jpg/1200px-Industrial_furnace.jpg",
+    image: RadiantTube,
+    label: "RADIANT TUBES",
   },
   {
     title: "Vaidyaaz ENCON Coating for Boiler",
@@ -44,8 +48,8 @@ const coatings = [
       "Prolongs boiler service life",
     ],
     link: "/products",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLNUD9i6QDyO0au1pj1hnwv6uzN6VEwiPCMg&s",
+    image: Boiler,
+    label: "BOILER",
   },
   {
     title: "Vaidyaaz ENCON Coating for Oven",
@@ -58,8 +62,8 @@ const coatings = [
       "Improves product quality consistency",
     ],
     link: "/products",
-    image:
-      "https://images.unsplash.com/photo-1613970351372-9804e380bd09?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybmFjZXxlbnwwfHwwfHx8MA%3D%3D",
+    image: Oven,
+    label: "OVEN",
   },
 ];
 
@@ -70,18 +74,14 @@ const HowWeHelp = () => {
     <section className="how-we-help">
       <div className="container">
         {/* Heading */}
-        <h2>
-  How We Help ??
-</h2>
-
-
+        <h2>How We Help ??</h2>
 
         {/* Intro */}
         <motion.p
           className="intro"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: false, amount: 0.4 }}
         >
           At <strong>Vaidyaaz</strong>, our ENCON Coating solutions help save
@@ -100,7 +100,7 @@ const HowWeHelp = () => {
               className="text"
               initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
+              transition={{ duration: 0.9, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.3 }}
             >
               <h3>{item.title}</h3>
@@ -117,16 +117,23 @@ const HowWeHelp = () => {
               </button>
             </motion.div>
 
-            {/* Image block with scroll animation */}
+            {/* Image block with scroll + hover effect */}
             <motion.div
               className="image-placeholder"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: false, amount: 0.3 }}
             >
-              <img src={item.image} alt={item.title} />
+              <div className="image-wrapper">
+                <img src={item.image} alt={item.title} className="coating-image" />
+                <div className="overlay">
+                  <span>{item.label}</span>
+                </div>
+              </div>
             </motion.div>
+
+
           </div>
         ))}
       </div>

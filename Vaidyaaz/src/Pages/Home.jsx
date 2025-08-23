@@ -4,6 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HowWeHelp from "./HowWeHelp";
 import StatsCounters from "./StatsCounters";
+import Carausel1 from "../assets/Images/SaveTheEarth.jpg"
+import Carausel2 from "../assets/Images/Chimnee.jpg"
+import Carausel3 from "../assets/Images/Globe.jpg"
 
 const Home = () => {
   const settings = {
@@ -21,17 +24,17 @@ const Home = () => {
 
   const slides = [
     {
-      img: "https://www.shutterstock.com/image-photo/banner-industrial-gardening-greenhouse-male-260nw-2223128871.jpg",
+      img: Carausel1,
       text: "VAIDYAAZ CORPORATION PRIVATE LIMITED",
       p: "We specialize in delivering top-notch greenhouse solutions tailored to meet your needs."
     },
     {
-      img: "https://media.istockphoto.com/id/1397962038/photo/view-into-a-polytunnel-with-strawberry-plants.jpg?s=612x612&w=0&k=20&c=C41uwDQ0AdRd1K5WQicVPIyztnoXQUKzWN7U5-gzS0k=",
+      img: Carausel2,
       text: "We Build Quality and Trust",
       p: "Our products are built with precision and care to ensure long-lasting quality and customer satisfaction."
     },
     {
-      img: "https://media.istockphoto.com/id/1322159015/photo/greenhouse-owner-examining-flowers-and-using-laptop-and-touchpad-at-work.jpg?s=612x612&w=0&k=20&c=LryNcPA-zHOw2DPKric-hqRkRB8GrTiwN1W2BlVwD8Q=",
+      img: Carausel3,
       text: "Your Vision, Our Mission",
       p: "The ENCON coating improves furnace efficiency by increasing thermal emissivity and decreasing thermal conductivity, which reduces carbon emissions and fuel consumption."
     },

@@ -49,15 +49,15 @@ const Footer = () => {
         <div className="footer-section">
           <h2>Our Services</h2>
           <ul>
-            <li>Heat Resistant Coatings</li>
-            <li>Industrial Paint Solutions</li>
-            <li>Surface Protection Systems</li>
-            <li>Consulting & Custom Solutions</li>
+            <li>Coating for Radiant Tubes</li>
+            <li> Coating for Boiler</li>
+            <li>Coating for Oven</li>
+            <li> Coating for Furnace</li>
           </ul>
         </div>
 
         {/* Resources */}
-        <div className="footer-section">
+        {/* <div className="footer-section">
           <h2>Resources</h2>
           <ul>
             <li><Link to="/careers">Careers</Link></li>
@@ -65,7 +65,7 @@ const Footer = () => {
             <li><Link to="/privacy">Privacy Policy</Link></li>
             <li><Link to="/terms">Terms & Conditions</Link></li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Social Media */}
         <div className="footer-section">

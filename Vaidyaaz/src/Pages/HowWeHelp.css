@@ -30,7 +30,8 @@
 }
 
 .coating-row .text {
-  flex: 1.2; /* give more space to text */
+  flex: 1.2;
+  /* give more space to text */
 }
 
 .coating-row h3 {
@@ -88,19 +89,23 @@
 /* Responsive */
 @media (max-width: 992px) {
   .coating-row .text {
-    flex: 1; /* equal space for text and image */
+    flex: 1;
+    /* equal space for text and image */
   }
 }
 
 @media (max-width: 768px) {
+
   .coating-row,
   .coating-row.reverse {
     flex-direction: column;
   }
+
   .coating-row .text {
     flex: unset;
     width: 100%;
   }
+
   .coating-row button {
     width: fit-content;
   }
@@ -132,6 +137,55 @@
   margin-bottom: 1rem;
   line-height: 1.6;
 }
-.image-placeholder{
+
+.image-placeholder {
   height: 400px;
+}
+
+/* ========================== */
+/* Ensure wrapper only takes image size */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  /* no extra width */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+
+.image-wrapper:hover img {
+  filter: brightness(70%);
+  transform: scale(1.05);
+}
+
+/* Overlay only inside image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* ensures overlay matches image exactly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
 }

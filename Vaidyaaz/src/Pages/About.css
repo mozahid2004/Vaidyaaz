@@ -1,6 +1,6 @@
 .about-banner {
   height: 40vh;
-  background: url('https://www.shutterstock.com/image-photo/using-laptop-show-icon-address-600nw-2521386695.jpg') center/cover no-repeat;
+  background: url('../assets/Images/AboutUs.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

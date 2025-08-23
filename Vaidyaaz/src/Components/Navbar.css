@@ -97,7 +97,7 @@ body.menu-open {
 }
 .nav-links li a.active {
   color: #FFD700;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 /* Dropdown */

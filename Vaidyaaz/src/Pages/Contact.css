@@ -9,7 +9,7 @@
 .contact-hero {
   position: relative;
   height: 250px;
-  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") center/cover no-repeat;
+  background: url("../assets//Images/ContactUs.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
